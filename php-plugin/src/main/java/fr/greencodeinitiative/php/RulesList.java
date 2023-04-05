@@ -24,12 +24,7 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
-import fr.greencodeinitiative.php.checks.AvoidDoubleQuoteCheck;
-import fr.greencodeinitiative.php.checks.AvoidFullSQLRequestCheck;
-import fr.greencodeinitiative.php.checks.AvoidSQLRequestInLoopCheck;
-import fr.greencodeinitiative.php.checks.AvoidTryCatchFinallyCheck_NOK_failsAllTryStatements;
-import fr.greencodeinitiative.php.checks.IncrementCheck;
-import fr.greencodeinitiative.php.checks.NoFunctionCallWhenDeclaringForLoop;
+import fr.greencodeinitiative.php.checks.*;
 
 public final class RulesList {
 
@@ -46,11 +41,11 @@ public final class RulesList {
     public static List<Class<?>> getPhpChecks() {
         return Collections.unmodifiableList(Arrays.asList(
                 IncrementCheck.class,
-                AvoidTryCatchFinallyCheck_NOK_failsAllTryStatements.class,
                 AvoidDoubleQuoteCheck.class,
                 AvoidFullSQLRequestCheck.class,
                 AvoidSQLRequestInLoopCheck.class,
-                NoFunctionCallWhenDeclaringForLoop.class
+                NoFunctionCallWhenDeclaringForLoop.class,
+                AvoidTryCatchFinallyCheck.class
         ));
     }
 
