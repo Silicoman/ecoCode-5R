@@ -1,0 +1,24 @@
+<p>
+  Avoid using arrays in foreach loops
+</p>
+<p>foreach deduplicates items in a list before starting the enumeration. It is therefore generally more economical to use a simple for loop when you have a good command of the collection.</p>
+<h2>Noncompliant Code Example</h2>
+<pre>
+  $a = [1, 2, 3, 17];
+    function testForEachLoop() {
+        $dummy = 0;
+        foreach ($a as $v) { // NOK
+            $dummy += $v;
+        }
+    }
+</pre>
+<h2>Compliant Solution</h2>
+<pre>
+  $a = [1, 2, 3, 17];
+  function testForLoop() {
+        $dummy = 0;
+        for ($i=0; $i < sizeof($a); ++$i) {
+            $dummy += $a[$i];
+        }
+    }
+</pre>
