@@ -9,13 +9,13 @@ import org.sonar.plugins.python.api.tree.TryStatement;
 
 @Rule(
         key = AvoidTryCatchFinallyCheck.RULE_KEY,
-        name = "Developpement",
+        name = "Avoid using try-catch-finally statement",
         description = AvoidTryCatchFinallyCheck.DESCRIPTION,
         priority = Priority.MINOR,
-        tags = {"bug"})
+        tags = {"bug", "eco-design", "ecocode"})
 public class AvoidTryCatchFinallyCheck extends PythonSubscriptionCheck {
 
-    public static final String RULE_KEY = "S34";
+    public static final String RULE_KEY = "EC34";
     public static final String DESCRIPTION = "Avoid the use of try-catch-finally";
 
     @Override

@@ -9,18 +9,43 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- [#44](https://github.com/green-code-initiative/ecoCode/pull/44) Update the PHP description rules
+### Changed
+
+### Deleted
+
+## [1.1.0] - 2023-04-03
 
 ### Changed
 
-- [#40](https://github.com/green-code-initiative/ecoCode/issues/40) (PR [#54](https://github.com/green-code-initiative/ecoCode/pull/54)) Refactoring of package names (`cnumr` to  `greencodeinitiative`)
-- modifying documentation to move a part to `ecoCode-common` repository
-- move common init scripts to `ecoCode-common` repository
+- [#63](https://github.com/green-code-initiative/ecoCode/issues/63) Update plugins to be compliant for SonarQube MarketPlace integration ( PR [#79](https://github.com/green-code-initiative/ecoCode/pull/79) )
+- [#88](https://github.com/green-code-initiative/ecoCode/pull/88) upgrade rules matrix with new ids + refactoring rules documentation (`RULES.md`)
+  - _*WARNING*_ : since this plugin version, ids of plugin rules changed. In consequence, if you have already made some issue checks in your SonarQube instance, you will have to do them again (example : false-positive issues will appear again)
+
+### Deleted
+
+- [#85](https://github.com/green-code-initiative/ecoCode/issues/85) Cleaning some useless classes on PHP plugin
+
+## [1.0.0] - 2023-03-24
+
+### Added
+
+- [#44](https://github.com/green-code-initiative/ecoCode/pull/44) Update the PHP description rules
+- [#67](https://github.com/green-code-initiative/ecoCode/pull/67) Add JavaScript plugin
+- add `ecocode` tag on all rules on Java, PHP, Python and javascript plugins
+
+### Changed
+
+- [#40](https://github.com/green-code-initiative/ecoCode/issues/40) Refactoring of package names (`cnumr` to  `greencodeinitiative`)
 - [#58](https://github.com/green-code-initiative/ecoCode/issues/58) check and upgrade compatibility to SonarQube 9.9
-- move `CONTRIBUTING.md` to common doc in `ecoCode-common` repository
-- move `CODE_STYLE.md` to common doc in `ecoCode-common` repository
-- move `INSTALL.md` to common doc in `ecoCode-common` repository
+- move common init scripts to `ecoCode-common` repository
+- modifying documentation and move `CONTRIBUTING.md`, `CODE_STYLE.md` and `INSTALL.md` to common doc in `ecoCode-common` repository
 - security / performance optimizations : correction of `sonarcloud.io` security hotspots (java / php, python) and move Pattern compilation to static attribute
+- [#65](https://github.com/green-code-initiative/ecoCode/issues/65) Create a test project to check new plugin rule in real environment
+- [#71](https://github.com/green-code-initiative/ecoCode/issues/71) After an PHP analysis, no ecocode code smells appears in my Sonar project
+- [#64](https://github.com/green-code-initiative/ecoCode/issues/64) Python: ecoCode plugin with SonarQube, no code-smell detection
+- [#55](https://github.com/green-code-initiative/ecoCode/issues/55) rename `eco-conception` tag of rules to `eco-design`
+- [#76](https://github.com/green-code-initiative/ecoCode/issues/76) correction of SonarQube plugins homepage link broken
+- documentation upgrade
 
 ### Deleted
 
@@ -43,8 +68,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [0.2.1] - 2022-12-30
 
-### Added
-
 ### Changed
 
 - [#22](https://github.com/green-code-initiative/ecoCode/issues/22) Error when running sonar scan with ecocode
@@ -66,7 +89,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- [161](https://github.com/cnumr/ecoCode/issues/161) adding tool to update tags of native rules with our custom tags
+- [#161](https://github.com/cnumr/ecoCode/issues/161) adding tool to update tags of native rules with our custom tags
 
 ### Changed
 
@@ -79,7 +102,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - First official release of ecocode plugins : java plugin, php plugin and python plugin
 
-[unreleased]: https://github.com/green-code-initiative/ecoCode/compare/v0.2.2...HEAD
+[unreleased]: https://github.com/green-code-initiative/ecoCode/compare/v1.1.0...HEAD
+
+[1.0.0]: https://github.com/green-code-initiative/ecoCode/compare/v1.0.0...v1.1.0
+
+[1.0.0]: https://github.com/green-code-initiative/ecoCode/compare/v0.2.2...v1.0.0
 
 [0.2.2]: https://github.com/green-code-initiative/ecoCode/compare/v0.2.1...v0.2.2
 

@@ -8,12 +8,13 @@ import org.sonar.plugins.python.api.tree.Tree;
 
 @Rule(
         key = NoFunctionCallWhenDeclaringForLoop.RULE_KEY,
-        priority = Priority.MINOR,
         name = NoFunctionCallWhenDeclaringForLoop.DESCRIPTION,
-        description = "")
+        description = NoFunctionCallWhenDeclaringForLoop.DESCRIPTION,
+        priority = Priority.MINOR,
+        tags = {"bug", "eco-design", "ecocode"})
 public class NoFunctionCallWhenDeclaringForLoop extends PythonSubscriptionCheck {
 
-    public static final String RULE_KEY = "S69";
+    public static final String RULE_KEY = "EC69";
     public static final String DESCRIPTION = "Do not call a function when declaring a for-type loop";
 
     @Override
