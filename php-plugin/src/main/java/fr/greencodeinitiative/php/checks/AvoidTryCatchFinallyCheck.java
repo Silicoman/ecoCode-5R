@@ -5,14 +5,16 @@ import org.sonar.check.Rule;
 import org.sonar.plugins.php.api.tree.statement.TryStatementTree;
 import org.sonar.plugins.php.api.visitors.PHPVisitorCheck;
 @Rule(
-        key = "S34",
-        name = "Developpement",
+        key = AvoidTryCatchFinallyCheck.RULE_KEY,
+        name = AvoidTryCatchFinallyCheck.ERROR_MESSAGE,
         description = AvoidTryCatchFinallyCheck.MESSAGE,
         priority = Priority.MINOR,
-        tags = {"bug"})
+        tags = {"bug", "eco-design", "ecocode"})
 public class AvoidTryCatchFinallyCheck  extends PHPVisitorCheck {
+    public static final String RULE_KEY = "S34";
     public static final String KEY = "AvoidUsingFinallyInTryCatchCheck";
     public static final String MESSAGE = "Avoid using try-catch-finally";
+    public static final String ERROR_MESSAGE = "Avoid using try-catch-finally";
 
 
     @Override
