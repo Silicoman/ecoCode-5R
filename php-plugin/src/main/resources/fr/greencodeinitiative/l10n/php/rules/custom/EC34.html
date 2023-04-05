@@ -1,21 +1,20 @@
 <p>
-    Using try catch without finally
+    Use try catch... only if necessary
 </p>
 <h2> Noncompliant Code Example</h2>
 <p>
     try{
-        ...
-    }catch(){
-        ...
-    }finaly{
-
+        isNumber(2); // isNumber is a function which checks if argument is number
+        echo "It's a number";
+    }catch(CheckTypeException $exception){ // CheckTypeException personalized exception
+        echo "Erreur:" $execption->getMessage();
     }
 </p>
 <h2> Compliant Code Example</h2>
 <p>
-    try{
-    ...
-    }catch(){
-    ...
+    if(isNumber(2){
+        echo "It's a number";
+    }else{
+        echo "It's not a number";
     }
 </p>
