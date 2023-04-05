@@ -11,7 +11,7 @@ import org.sonar.plugins.php.api.visitors.PHPVisitorCheck;
         priority = Priority.MINOR,
         tags = {"eco-design", "ecocode"})
 public class AvoidTryCatchFinallyCheck  extends PHPVisitorCheck {
-    public static final String RULE_KEY = "S34";
+    public static final String RULE_KEY = "EC34";
     public static final String KEY = "AvoidUsingFinallyInTryCatchCheck";
     public static final String MESSAGE = "Avoid using try-catch-finally";
     public static final String ERROR_MESSAGE = "Avoid using try-catch-finally";
