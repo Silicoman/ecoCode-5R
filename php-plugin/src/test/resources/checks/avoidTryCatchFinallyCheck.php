@@ -1,22 +1,23 @@
 <?php
-function inverse($x) {
-    if (!$x) {
-        throw new Exception('Division par zéro.');
+  try{// NOK {{Avoid using try-catch-finally}}
+        isNumber(2); // isNumber is a function which checks if argument is number
+        echo "It's a number";
+    }catch(CheckTypeException $exception){ // CheckTypeException personalized exception
+        echo "Erreur:".$exception;
     }
-    return 1/$x;
-}
 
-try {
-    echo inverse(1) . "\n";
-} catch (Exception $e) {
-    echo 'Exception reçue : ',  $e->getMessage(), "\n";
-} finally { // NOK {{Avoid using try-catch-finally}}
-    echo "Première fin.\n";
-}
+  try{// NOK {{Avoid using try-catch-finally}}
+        isNumber(2); // isNumber is a function which checks if argument is number
+        echo "It's a number";
+    }catch(CheckTypeException $exception){ // CheckTypeException personalized exception
+        echo "Erreur:".$exception;
+    }finally{
+     echo "Finally.\n";
+    }
 
-try {
-    echo inverse(2) . "\n";
-} catch (Exception $e) {
-    echo 'Exception reçue : ',  $e->getMessage(), "\n";
-}
-
+if(isNumber(2)){
+        echo "It's a number";
+    }else{
+        echo "It's not a number";
+    }
+?>
