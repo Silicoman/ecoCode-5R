@@ -24,7 +24,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.net.URL;
 import java.nio.charset.StandardCharsets;
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -33,7 +32,7 @@ import com.google.common.collect.ImmutableList;
 import fr.greencodeinitiative.php.checks.AvoidDoubleQuoteCheck;
 import fr.greencodeinitiative.php.checks.AvoidFullSQLRequestCheck;
 import fr.greencodeinitiative.php.checks.AvoidSQLRequestInLoopCheck;
-import fr.greencodeinitiative.php.checks.AvoidTryCatchFinallyCheck_NOK_failsAllTryStatements;
+import fr.greencodeinitiative.php.checks.AvoidTryCatchFinallyCheck;
 import fr.greencodeinitiative.php.checks.AvoidUsingGlobalVariablesCheck;
 import fr.greencodeinitiative.php.checks.IncrementCheck;
 import fr.greencodeinitiative.php.checks.NoFunctionCallWhenDeclaringForLoop;
@@ -92,11 +91,11 @@ public class PhpRuleRepository implements RulesDefinition, PHPCustomRuleReposito
             AvoidDoubleQuoteCheck.class,
             AvoidFullSQLRequestCheck.class,
             AvoidSQLRequestInLoopCheck.class,
-            AvoidTryCatchFinallyCheck_NOK_failsAllTryStatements.class,
             AvoidUsingGlobalVariablesCheck.class,
             IncrementCheck.class,
             NoFunctionCallWhenDeclaringForLoop.class,
-            UseOfMethodsForBasicOperations.class
+            UseOfMethodsForBasicOperations.class,
+            AvoidTryCatchFinallyCheck.class
     );
   }
 
