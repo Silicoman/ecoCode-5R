@@ -9,7 +9,7 @@ import org.sonar.plugins.php.api.visitors.PHPVisitorCheck;
         name = AvoidTryCatchFinallyCheck.ERROR_MESSAGE,
         description = AvoidTryCatchFinallyCheck.MESSAGE,
         priority = Priority.MINOR,
-        tags = {"bug", "eco-design", "ecocode"})
+        tags = {"eco-design", "ecocode"})
 public class AvoidTryCatchFinallyCheck  extends PHPVisitorCheck {
     public static final String RULE_KEY = "S34";
     public static final String KEY = "AvoidUsingFinallyInTryCatchCheck";
